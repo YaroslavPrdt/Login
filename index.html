@@ -10,62 +10,75 @@
 </head>
 <body>
 	<div class="wrapper">
-		<div class="tabbed">
-			<div id="login">
-				<p>Login</p>
-				<form id="form-1" class="tab-form">
-					<div class="tab-form-wrapper">
-						<div class="box-input">
-							<label>email</label>
-							<input class="input" type="text" required placeholder="example@email.com">				
+		<div class="authform">
+			<div id="login" class="authform-tab authform-signin">
+				<div class="authform-content signin-content">
+					<form id="form-1" class="tab-form">
+						<div class="tab-form-wrapper">
+							<div class="box-input">
+								<label>email</label>
+								<input class="input" type="email" required placeholder="example@email.com">				
+							</div>
+						
+							<div class="box-input">
+								<label>password</label>
+								<input class="input" type="password" required placeholder="**********">
+							</div>
+						
+							<div class="button-forgot-wrapper">
+								<a href="#" class="forgot-password">Forgot password?</a>
+								<a href="#" class="button">Signin</a>
+							</div>
 						</div>
-					
-						<div class="box-input">
-							<label>password</label>
-							<input class="input" type="password" required placeholder="**********">
+						<div class="social">
+							<ul class="facebook">
+								<li class="social-icon"><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li class="social-link">
+									<span>
+										Sign in with
+									</span>
+									<a href="#">
+										Facebook
+									</a>
+								</li>
+							</ul>
+							<ul class="google-plus">
+								<li class="social-icon"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								<li class="social-link">
+									<span>
+									Sign in with
+									</span>
+									<a href="#">
+										Google+
+									</a>
+								</li>
+							</ul>
 						</div>
-					
-						<div class="button-forgot-wrapper">
-							<a href="#" class="forgot-password">Forgot password?</a>
-							<a href="#" class="button">Signin</a>
-						</div>
-					</div>
-				<div class="social">
-					<ul class="facebook">
-						<li class="social-icon"><a href="#"><i class="fa fa-facebook"></i></a></li>
-						<li class="social-link">
-							<span>
-								Sign in with
-							</span>
-							<a href="#">
-								Facebook
-							</a>
-						</li>
-					</ul>
-					<ul class="google-plus">
-						<li class="social-icon"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-						<li class="social-link">
-							<span>
-							Sign in with
-							</span>
-							<a href="#">
-								Google+
-							</a>
-						</li>
-					</ul>
+					</form>
 				</div>
-				</form>
 			</div>
-			<div id="register">
-				<p>Register</p>
-				<form id="form-2" class="tab-form">
-					<div class="tab-form-wrapper">
-						<input class="input" type="email" placeholder="e-mail">
-						<input class="input" type="text" placeholder="name">
-						<input class="input" type="password" placeholder="pass">
-						<a href="#" class="button">Reg</a>
-					</div>
-				</form>
+			
+			
+			<div id="register" class="authform-tab authform-signup">
+				<div class="authform-content signup-content">
+					<form id="form-2" class="tab-form">
+						<div class="tab-form-wrapper">
+							<div class="box-input">
+								<label>email</label>
+								<input class="input" type="email" required placeholder="example@email.com">
+							</div>
+							<div class="box-input">
+								<label>name</label>
+								<input class="input" type="text" required placeholder="Your Name">
+							</div>
+							<div class="box-input">
+								<label>password</label>
+								<input class="input" type="password" required placeholder="**********">
+							</div>
+							<a href="#" class="button">Reg</a>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>

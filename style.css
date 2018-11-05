@@ -1,6 +1,55 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
 
+*, *::before, *::after { box-sizing: border-box; }
+
+.authform { 
+  padding-top: 60px;
+}
+
+.authform-signin::before,
+.authform-signup::before {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 60px;
+  border: none;
+}
+
+.authform-signin::before {
+  content: "Login";
+  text-align: center;  
+  padding-top: 20px;
+  background-color: #fff;
+  font-weight: 800;
+}
+
+.authform-signup::before {
+  content: "Register";
+  text-align: center;
+  left: 50%;  
+  padding-top: 20px;
+  font-weight: 800;
+  color: #FFF; 
+}
+
+.signup-content {
+  display: none;
+}
+
+.authform:hover .authform-tab::before{
+  background-color: transparent;
+   color: #FFF; 
+}
+
+.authform .authform-tab:hover::before{
+  background-color: #FFF;
+  color: #000;
+} 
+.authform .authform-tab:hover .authform-content{
+  display: block;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -17,62 +66,30 @@ body {
     align-items: center;
 }
 
-.tabbed {
+.authform {
     position: relative;
-    font-size: 0;
     width: 370px;
     background-color: rgba(225, 225, 225, 1); 
 }
 
-.tabbed a:hover {
+.authform a:hover {
     text-decoration: none;
     transition: .5s;
-    color: rgb(0, 0, 0);;
+    color: rgb(0, 0, 0);
 }
 
-.tabbed ul {
+.authform ul {
     padding: 0;
     margin: 0;
     font-size: 15px;
     display: block;
 }
 
-.tabbed input {
-    display: block;
-    width: 100%;
-}
-
-.tabbed > div {
-    display: inline-block;
-    font-size: 16px;
-    background-color: #E1E1E1;
+.authform > div > div {
     text-align: center;
-    width: 50%;
 }
 
-.tabbed > div:hover {
-    display: inline-block;
-    font-size: 16px;
-    background-color: #fff;
-    text-align: center;
-    width: 50%;
-}
-
-.tabbed > div > p {
-    color: #303030;
-    font-weight: 600;
-    display: inline-block;
-    text-align: center;    
-    cursor: pointer;
-}
-
-
-.tabbed > div:target {
-    color: #333;
-    background-color: #eee;
-}
-
-.tabbed > div > form {
+.authform > div > div> form {
     position: absolute;
     top: 100%;
     left: 0;
@@ -87,16 +104,13 @@ body {
     padding: 30px 20px 20px;
 }
 
-.tabbed > div > #form-1 {
+.authform > div > div > #form-1 {
     display: block;
 }
 
-
-.tabbed > div:hover > #form-2 {
+.authform > div:hover > div > #form-2 {
     display: block;
-}
-
-
+} 
 
 .input {
     font-size: 16px;
@@ -172,7 +186,7 @@ body {
     color: #64AEC7;
 }
 
-.tabbed input {
+.authform input {
     display: block;
     width: 100%;
 }
@@ -209,6 +223,55 @@ body {
     background-color: #C74A48;
 }
 
-#form-2 div input {
-    margin-top: 23.5px;
+#form-2 div div input {
+    margin-top: 2px;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .authform {
+        width: 80%;
+    }
+
+     .authform > div > div> form {
+        width: 100%;
+    } 
+
+    .authform input,
+    .box-input {
+        text-align: center;
+    }
+
+    .wrapper {
+        height: 30vh;  
+    } 
+
+    .button {        
+        line-height: 80px;
+        width: 15%;
+        border-radius: 50%;
+       }
+
+    .social-icon {
+        width: 31.5%;
+    }
+
+    .forgot-password {
+        width: 15%;
+    }
+}
+
+@media screen and (max-width: 724px) {
+
+     .authform {
+        width: 95%;
+    }
+
+    .button {        
+        line-height: 60px;
+       }
+
+    .social-icon {
+        width: 30.85%;
+    }
 }
